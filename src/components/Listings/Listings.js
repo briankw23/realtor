@@ -7,9 +7,10 @@ import ListingItem from '../ListingItem/ListingItem';
 class Listings extends React.Component {
   static propTypes = {
     listings: PropTypes.arrayOf(listingShape),
+    onListingsSelection: PropTypes.func,
   }
   render () {
-    const {listings} = this.props;
+    const {listings, onListingsSelection} = this.props;
     const listingsItemsComponents = listings.map((listing, index) => {
       return (
 
@@ -17,6 +18,7 @@ class Listings extends React.Component {
           key={listing.id}
           index={index}
           listing={listing}
+          onSelect={onListingsSelection}
         />
       );
     });
