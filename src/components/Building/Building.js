@@ -2,6 +2,7 @@ import React from 'react';
 import './Building.css';
 import {listingOptionalShape} from '../../propz/listingProp';
 import {formatPrice} from '../../helpers';
+import BuildingTile from '../BuildingTiles/BuildingTile';
 
 class Building extends React.Component {
   static propTypes = {listing: listingOptionalShape};
@@ -29,7 +30,28 @@ class Building extends React.Component {
           <div className='col-xs-6'>
           </div>
         </div>
-
+        <div className="row">
+          <BuildingTile
+            imageSrc='cal.png'
+            altText='calendar'
+            pTagText={`Built:${listing.yearBuilt}`}
+          />
+          <BuildingTile
+            imageSrc='hill.png'
+            altText='hill'
+            pTagText={`${listing.lotInAcres} acres`}
+          />
+          <BuildingTile
+            imageSrc='flame.png'
+            altText='flame'
+            pTagText={listing.heating}
+          />
+          <BuildingTile
+            imageSrc='snow.png'
+            altText='snowflake'
+            pTagText={listing.cooling}
+          />
+        </div>
       </div>
     );
   }
