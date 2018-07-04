@@ -32,22 +32,22 @@ class Building extends React.Component {
         </div>
         <div className="row">
           <BuildingTile
-            imageSrc='cal.png'
+            imageSrc='cal'
             altText='calendar'
             pTagText={`Built:${listing.yearBuilt}`}
           />
           <BuildingTile
-            imageSrc='hill.png'
+            imageSrc='hill'
             altText='hill'
             pTagText={`${listing.lotInAcres} acres`}
           />
           <BuildingTile
-            imageSrc='flame.png'
+            imageSrc='flame'
             altText='flame'
             pTagText={listing.heating}
           />
           <BuildingTile
-            imageSrc='snow.png'
+            imageSrc='snow'
             altText='snowflake'
             pTagText={listing.cooling}
           />
