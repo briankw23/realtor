@@ -10,7 +10,7 @@ class BuildingTile extends React.Component {
   }
   render () {
     const {imageSrc, altText, pTagText} = this.props;
-    const image = require(`./images/${imageSrc}`);
+    const image = require(`./images/${imageSrc}.png`);
     return (
       <div className=" col-xs-3 BuildingTile">
         <div className="image-detail">
