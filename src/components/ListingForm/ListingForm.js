@@ -2,6 +2,8 @@ import React from 'react';
 
 import './ListingForm.css';
 
+import PropTypes from 'prop-types';
+
 const defaultListing = {
   address: '',
   city: '',
@@ -21,6 +23,9 @@ const defaultListing = {
 };
 
 class ListingForm extends React.Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  }
   state = {
     newListing: defaultListing,
   }
